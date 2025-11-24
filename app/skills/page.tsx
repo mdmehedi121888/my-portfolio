@@ -6,30 +6,76 @@ import {
   SiRedux, SiHtml5, SiCss3, SiTailwindcss,
   SiFramer,
   SiNodedotjs, SiExpress, SiNestjs, SiMysql, SiPostgresql,
-  SiCodeforces, SiLeetcode, SiGeeksforgeeks, SiCodechef
+  SiCodeforces, SiLeetcode, SiGeeksforgeeks, SiCodechef,
+  SiDocker,
+  SiRedis,
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiJirasoftware,
+  SiPostman,
+  SiGitlab,
+  SiGithubactions,
+  SiNginx,
+  SiKubernetes,
+  SiSqlite,
+  SiMongodb,
+  SiGraphql,
+  SiApachespark,
+  SiSass
 } from "react-icons/si";
 
 export default function SkillsSection() {
   const frontendSkills = [
-    { name: "JavaScript (ES6+)", icon: SiJavascript, level: 85, color: "text-yellow-400" },
-    { name: "TypeScript", icon: SiTypescript, level: 75, color: "text-blue-400" },
-    { name: "Python", icon: SiPython, level: 35, color: "text-blue-300" },
-    { name: "React", icon: SiReact, level: 95, color: "text-cyan-400" },
-    { name: "Next.js", icon: SiNextdotjs, level: 90, color: "text-white" },
-    { name: "Redux Toolkit", icon: SiRedux, level: 85, color: "text-purple-400" },
-    { name: "HTML5", icon: SiHtml5, level: 95, color: "text-orange-500" },
-    { name: "CSS3", icon: SiCss3, level: 95, color: "text-blue-500" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, level: 95, color: "text-teal-400" },
-    { name: "Framer Motion", icon: SiFramer, level: 85, color: "text-pink-400" },
-  ];
+  { name: "JavaScript (ES6+)", icon: SiJavascript, level: 70, color: "text-yellow-400" },
+  { name: "TypeScript", icon: SiTypescript, level: 60, color: "text-blue-400" },
+  { name: "React", icon: SiReact, level: 65, color: "text-cyan-400" },
+  { name: "Next.js", icon: SiNextdotjs, level: 55, color: "text-white" },
+  { name: "Redux Toolkit", icon: SiRedux, level: 40, color: "text-purple-400" },
+  { name: "HTML5", icon: SiHtml5, level: 90, color: "text-orange-500" },
+  { name: "CSS3", icon: SiCss3, level: 85, color: "text-blue-500" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, level: 75, color: "text-teal-400" },
+  { name: "Framer Motion", icon: SiFramer, level: 30, color: "text-pink-400" },
+  { name: "Sass", icon: SiSass, level: 40, color: "text-pink-500" },
+];
+
 
   const backendSkills = [
-    { name: "Node.js", icon: SiNodedotjs, level: 90, color: "text-green-400" },
-    { name: "Express.js", icon: SiExpress, level: 85, color: "text-gray-400" },
-    { name: "NestJS", icon: SiNestjs, level: 25, color: "text-red-500" },
-    { name: "MySQL", icon: SiMysql, level: 90, color: "text-orange-600" },
-    { name: "PostgreSQL", icon: SiPostgresql, level: 60, color: "text-blue-600" },
-  ];
+  { name: "Node.js", icon: SiNodedotjs, level: 65, color: "text-green-400" },
+  { name: "Express.js", icon: SiExpress, level: 70, color: "text-gray-400" },
+  { name: "NestJS", icon: SiNestjs, level: 35, color: "text-red-500" },
+  { name: "Python", icon: SiPython, level: 20, color: "text-yellow-400" },
+  { name: "REST APIs", icon: SiApachespark, level: 70, color: "text-blue-500" },
+  { name: "GraphQL", icon: SiGraphql, level: 30, color: "text-pink-500" },
+];
+
+const databaseSkills = [
+  { name: "MySQL", icon: SiMysql, level: 70, color: "text-orange-600" },
+  { name: "PostgreSQL", icon: SiPostgresql, level: 55, color: "text-blue-600" },
+  { name: "MongoDB", icon: SiMongodb, level: 50, color: "text-green-600" },
+  { name: "Redis", icon: SiRedis, level: 35, color: "text-red-600" },
+  { name: "SQLite", icon: SiSqlite, level: 0, color: "text-gray-500" },
+];
+
+
+const devopsSkills = [
+  { name: "Docker", icon: SiDocker, level: 50, color: "text-blue-600" },
+  { name: "Kubernetes", icon: SiKubernetes, level: 20, color: "text-blue-500" },
+  { name: "NGINX", icon: SiNginx, level: 0, color: "text-green-500" },
+  { name: "GitHub Actions", icon: SiGithubactions, level: 0, color: "text-gray-300" },
+  { name: "CI/CD Pipelines", icon: SiGitlab, level: 15, color: "text-orange-500" },
+];
+
+const toolsSkills = [
+  { name: "Git", icon: SiGit, level: 80, color: "text-orange-500" },
+  { name: "GitHub", icon: SiGithub, level: 75, color: "text-gray-300" },
+  { name: "Figma", icon: SiFigma, level: 15, color: "text-pink-400" },
+  { name: "Postman", icon: SiPostman, level: 75, color: "text-orange-500" },
+  { name: "Jira", icon: SiJirasoftware, level: 0, color: "text-blue-500" },
+];
+
+
+
 
   const onlineJudges = [
     { platform: "CodeForces", handle: "mdmehedi121888", problems: "1250+", icon: SiCodeforces, color: "text-red-500", link: "https://codeforces.com/profile/mdmehedi121888" },
@@ -101,7 +147,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Backend Technologies */}
-        <div className="mb-20">
+        <div className="mb-16">
           <motion.h3
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,6 +159,58 @@ export default function SkillsSection() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {backendSkills.map((skill, i) => (
               <SkillCard key={skill.name} skill={skill} index={i + frontendSkills.length} />
+            ))}
+          </div>
+        </div>
+
+
+        {/* Database Technologies */}
+        <div className="mb-16">
+          <motion.h3
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-yellow-300 mb-10"
+          >
+            Database Technologies
+          </motion.h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {databaseSkills.map((skill, i) => (
+              <SkillCard key={skill.name} skill={skill} index={i + databaseSkills.length} />
+            ))}
+          </div>
+        </div>
+
+        {/* Devops Technologies */}
+        <div className="mb-16">
+          <motion.h3
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-yellow-300 mb-10"
+          >
+             Devops Technologies
+          </motion.h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {devopsSkills.map((skill, i) => (
+              <SkillCard key={skill.name} skill={skill} index={i + devopsSkills.length} />
+            ))}
+          </div>
+        </div>
+
+        {/* Tools Technologies */}
+        <div className="mb-16">
+          <motion.h3
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-yellow-300 mb-10"
+          >
+              Tools
+          </motion.h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {toolsSkills.map((skill, i) => (
+              <SkillCard key={skill.name} skill={skill} index={i + toolsSkills.length} />
             ))}
           </div>
         </div>
