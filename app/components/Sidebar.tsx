@@ -12,9 +12,9 @@ export default function Sidebar() {
   const socialLinks = [
     { icon: FaLinkedin, href: "https://linkedin.com/in/mdmehedi121888", color: "hover:text-blue-500" },
     { icon: FaGithub, href: "https://github.com/mdmehedi121888", color: "hover:text-white" },
-    { icon: FaFacebook, href: "https://facebook.com/yourprofile", color: "hover:text-blue-600" },
-    { icon: FaInstagram, href: "https://instagram.com/yourprofile", color: "hover:text-pink-500" },
-    { icon: FaXTwitter, href: "https://twitter.com/yourprofile", color: "hover:text-cyan-400" },
+    { icon: FaFacebook, href: "https://www.facebook.com/md.mehedi.hasan.249333", color: "hover:text-blue-600" },
+    { icon: FaInstagram, href: "https://www.instagram.com/mdmehedi121888", color: "hover:text-pink-500" },
+    { icon: FaXTwitter, href: "https://x.com/MehediHasa47889", color: "hover:text-cyan-400" },
   ];
 
   return (

@@ -15,11 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#100D29] text-white">
+      <body className="bg-[#111633] text-white">
         <Navbar />
         <Sidebar />
         <main className="pl-20 pt-24">{children}</main>
-        {/* pl-20 gives space for the 80px (w-20) sidebar */}
       </body>
     </html>
   );

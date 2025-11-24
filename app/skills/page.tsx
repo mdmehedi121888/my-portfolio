@@ -35,8 +35,8 @@ export default function SkillsSection() {
   { name: "HTML5", icon: SiHtml5, level: 90, color: "text-orange-500" },
   { name: "CSS3", icon: SiCss3, level: 85, color: "text-blue-500" },
   { name: "Tailwind CSS", icon: SiTailwindcss, level: 75, color: "text-teal-400" },
-  { name: "Framer Motion", icon: SiFramer, level: 30, color: "text-pink-400" },
-  { name: "Sass", icon: SiSass, level: 40, color: "text-pink-500" },
+  { name: "Framer Motion", icon: SiFramer, level: 10, color: "text-pink-400" },
+  { name: "Sass", icon: SiSass, level: 10, color: "text-pink-500" },
 ];
 
 
