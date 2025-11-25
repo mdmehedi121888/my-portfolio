@@ -36,7 +36,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <Link href="/" className="group relative z-10">
+            {/* <Link href="/" className="group relative z-10">
               <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-linear-to-r from-cyan-400 via-yellow-400 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
                 MD. Mehedi Hasan
               </h1>
@@ -45,7 +45,20 @@ export default function Navbar() {
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.4 }}
               />
+            </Link> */}
+
+            <Link
+            href="/"
+            className="group relative z-50 block">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-linear-to-r from-cyan-400 via-yellow-400 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+              MD. Mehedi Hasan
+            </h1>
+            <motion.span
+              className="absolute -bottom-1 left-0 w-0 h-1 bg-linear-to-r from-cyan-400 to-pink-500 rounded-full"
+              whileHover={{ width: "100%" }}
+              transition={{ duration: 0.4 }}/>
             </Link>
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-6 lg:gap-10">
@@ -95,6 +108,7 @@ export default function Navbar() {
                 <FaBars className="w-6 h-6 text-white" />
               )}
             </button>
+
           </div>
         </div>
       </motion.nav>

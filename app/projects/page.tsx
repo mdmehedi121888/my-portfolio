@@ -31,18 +31,29 @@ const projects = [
     description: "Modern e-commerce platform with product catalog, cart, wishlist, secure checkout, and admin panel.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/mdmehedi121888/hasanah-ecommerce",
-    live: "https://hasanah-shop.netlify.app",
+    live: "https://ecommerce-app-frontend-nine.vercel.app/",
     images: [
-      "https://via.placeholder.com/800x500/1a1a2e/ yellow?text=Hasanah+Ecommerce+Homepage",
-      "https://via.placeholder.com/800x500/1a1a2e/ pink?text=Product+Page",
-      "https://via.placeholder.com/800x500/1a1a2e/ cyan?text=Cart+&+Checkout",
+      "https://github.com/user-attachments/assets/0909eef9-094a-4456-97df-434327ec23cd",
+      "https://github.com/user-attachments/assets/995d2c38-8c4c-4b25-bd3b-3fbfb7f43ff6",
+      "https://github.com/user-attachments/assets/a5f516a8-48ba-4fe4-afa5-c3f7aed56c84",
+      "https://github.com/user-attachments/assets/ec72474c-51ca-4961-831e-5fbc07ecfd55",
+      "https://github.com/user-attachments/assets/213fbb56-277d-4354-b818-dae9e5f0dfee",
+      "https://github.com/user-attachments/assets/8ffaaccf-381b-4b2f-8335-9563f9f9f04c",
+      "https://github.com/user-attachments/assets/8eed4baf-103a-4949-9550-9aa85c3a8840",
+      "https://github.com/user-attachments/assets/c1f27d19-ebf5-431d-b3b8-6bd4ce942f92",
+      "https://github.com/user-attachments/assets/34aa1c69-a601-48c6-b5e2-8f5bfb07045b",
+      "https://github.com/user-attachments/assets/b1d62cc8-6523-4a97-a0fd-975552eb5582",
+      "https://github.com/user-attachments/assets/0297c093-eb84-4c24-80c9-8329abb81585",
+      "https://github.com/user-attachments/assets/c32b287d-6136-47af-9bf2-e173dceb9ec8",
+      "https://github.com/user-attachments/assets/bda8f098-a32f-4e04-9a4a-4ea184ea4372",
+      "https://github.com/user-attachments/assets/e7955960-3fe3-4178-9185-3c4b1a8b4464"
     ],
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <section className="min-h-screen px-6 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
+    <section className="min-h-screen px-6 pb-7 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -103,7 +114,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.6 }}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain"
             />
           </AnimatePresence>
 

@@ -9,7 +9,7 @@ import Education from "../components/Education";
 import GithubStatsDashboard from "../components/GitHubStats";
 
 const softSkills = ["Teamwork", "Problem-Solving", "Adaptability", "Communication", "Time Management"];
-const hobbies = ["Coding", "Traveling", "Tech Exploration", "Movies", "Music"];
+const hobbies = [ "Traveling", "Tech Exploration", "Movies", "Music"];
 
 export default function AboutPage() {
   return (

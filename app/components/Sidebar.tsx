@@ -19,13 +19,13 @@ export default function Sidebar() {
 
   return (
     <motion.aside
-      initial={{ x: -80 }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="fixed left-0 top-0 h-screen w-20 z-50 flex flex-col items-center justify-between py-10 
-                 bg-white/5 backdrop-blur-2xl border-r border-white/20 
-                 shadow-2xl shadow-purple-500/10"
-    >
+  className="hidden md:flex
+             fixed left-0 top-0 h-screen w-20 z-50 
+             flex-col items-center justify-between py-10
+             bg-white/5 backdrop-blur-2xl border-r border-white/20 
+             shadow-2xl shadow-purple-500/10"
+>
+
       <div className="flex flex-col items-center gap-10">
 
         {/* Glowing Dot Indicator */}
