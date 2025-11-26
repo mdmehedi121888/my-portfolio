@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { 
   SiReact, SiNodedotjs, SiExpress, SiMysql, SiPostgresql, SiMongodb,
   SiGit, SiGithub, SiGitlab, SiDocker, SiPostman, SiJira,
-  SiFigma, SiTailwindcss, SiNextdotjs, SiTypescript
+  SiFigma, SiTailwindcss, SiNextdotjs, SiTypescript,
+  SiPhp
 } from "react-icons/si";
 import { 
   FaLaptopCode, FaServer, FaDatabase, FaClipboardList, 
@@ -24,7 +25,7 @@ export default function ExperienceSection() {
       title: "Software Engineer Intern",
       company: "Walton Hi-Tech Industries PLC",
       location: "Chandra, Kaliakoir, Gazipur",
-      date: "May 2024 – January 2025",
+      date: "May 2024 – December 2024",
       current: false,
     },
   ];
@@ -41,7 +42,7 @@ export default function ExperienceSection() {
   ];
 
   const techStack = [
-    { icon: SiReact, name: "React.js" }, { icon: SiNextdotjs, name: "Next.js" },
+    { icon: SiReact, name: "React.js" }, { icon: SiNextdotjs, name: "Next.js" },  { icon: SiPhp, name: "PHP" },
     { icon: SiNodedotjs, name: "Node.js" }, { icon: SiExpress, name: "Express.js" },
     { icon: SiTypescript, name: "TypeScript" }, { icon: SiMysql, name: "MySQL" },
     { icon: SiPostgresql, name: "PostgreSQL" }, { icon: SiMongodb, name: "MongoDB" },

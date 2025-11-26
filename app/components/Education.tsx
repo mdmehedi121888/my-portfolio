@@ -12,7 +12,6 @@ const educationData = [
     degree: "M.Eng. in Information and Communication Technology",
     period: "Oct 2024 – Present",
     icon: <FaGraduationCap className="w-6 h-6" />,
-    highlights: ["MBSTU BookHaven Platform (Final Year Project)"],
     badge: "In Progress",
     badgeColor: "bg-linear-to-r from-purple-500 to-pink-500",
   },
@@ -23,7 +22,7 @@ const educationData = [
     period: "Feb 2019 – Feb 2024",
     cgpa: "3.78 / 4.00",
     icon: <FaUniversity className="w-6 h-6" />,
-    highlights: ["MBSTU BookHaven Platform (Final Year Project)", "Strong Foundation in Full-Stack Development"],
+    highlights: ["MBSTU Hospital Management System", "Hasanah Ecommerce App"],
     badge: "Graduated",
     badgeColor: "bg-linear-to-r from-yellow-500 to-orange-500",
   },
@@ -34,8 +33,7 @@ const educationData = [
     period: "2015 – 2017",
     gpa: "5.00 / 5.00",
     icon: <FaSchool className="w-6 h-6" />,
-    highlights: ["Golden A+ in All Subjects", "Awarded for Punctuality & Ethics"],
-    badge: "Golden A+",
+    badge: "A+",
     badgeColor: "bg-linear-to-r from-cyan-500 to-blue-500",
   },
   {
@@ -45,8 +43,7 @@ const educationData = [
     period: "2010 – 2015",
     gpa: "5.00 / 5.00",
     icon: <FaSchool className="w-5 h-5" />,
-    highlights: ["Golden A+ in All Subjects", "Active Science Club Leader"],
-    badge: "Golden A+",
+    badge: "A+",
     badgeColor: "bg-linear-to-r from-emerald-500 to-teal-500",
   },
 ];
@@ -127,7 +124,7 @@ export default function Education() {
                   <ul className="space-y-2 mt-5">
                     {edu.highlights.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-300 text-sm">
-                        <span className="text-yellow-400 mt-1">→</span>
+                        <span className="text-yellow-400">→</span>
                         <span>{item}</span>
                       </li>
                     ))}

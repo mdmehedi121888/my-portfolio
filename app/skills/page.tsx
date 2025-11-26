@@ -45,29 +45,39 @@ import {
   SiExpo,
   SiC,
   SiCplusplus,
-  SiPhp
+  SiPhp,
+  SiBootstrap,
+  SiDaisyui,
+  SiPrisma,
+  SiTypeorm,
+  SiApachekafka,
+  SiGo,
+  SiAwselasticloadbalancing
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 export default function SkillsSection() {
 
 const programmingLanguageSkills = [
-  { name: "C", icon: SiC, level: 40, color: "text-blue-400" },
-  { name: "C++", icon: SiCplusplus, level: 50, color: "text-blue-500" },
+  { name: "JavaScript (ES6+)", icon: SiJavascript, level: 90, color: "text-yellow-400" },
+  { name: "TypeScript", icon: SiTypescript, level: 60, color: "text-blue-400" },
+  { name: "Go", icon: SiGo, level: 60, color: "text-blue-400" },
+  { name: "C", icon: SiC, level: 80, color: "text-blue-400" },
+  { name: "C++", icon: SiCplusplus, level: 90, color: "text-blue-500" },
+  { name: "PHP", icon: SiPhp, level: 70, color: "text-indigo-400" },
   { name: "Python", icon: SiPython, level: 45, color: "text-yellow-400" },
-  { name: "JavaScript", icon: SiJavascript, level: 70, color: "text-yellow-400" },
-  { name: "PHP", icon: SiPhp, level: 30, color: "text-indigo-400" },
 ];
 
 const frontendSkills = [
-  { name: "JavaScript (ES6+)", icon: SiJavascript, level: 70, color: "text-yellow-400" },
-  { name: "TypeScript", icon: SiTypescript, level: 60, color: "text-blue-400" },
-  { name: "React", icon: SiReact, level: 65, color: "text-cyan-400" },
-  { name: "Next.js", icon: SiNextdotjs, level: 55, color: "text-white" },
-  { name: "Redux Toolkit", icon: SiRedux, level: 40, color: "text-purple-400" },
+  { name: "React", icon: SiReact, level: 75, color: "text-cyan-400" },
+  { name: "Next.js", icon: SiNextdotjs, level: 65, color: "text-white" },
+  { name: "Redux Toolkit", icon: SiRedux, level: 20, color: "text-purple-400" },
   { name: "HTML5", icon: SiHtml5, level: 90, color: "text-orange-500" },
   { name: "CSS3", icon: SiCss3, level: 85, color: "text-blue-500" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, level: 75, color: "text-teal-400" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, level: 85, color: "text-teal-400" },
+  { name: "Bootstrap", icon: SiBootstrap, level: 85, color: "text-teal-400" },
   { name: "Framer Motion", icon: SiFramer, level: 10, color: "text-pink-400" },
+  { name: "Daisy UI", icon: SiDaisyui, level: 50, color: "text-pink-400" },
   { name: "Sass", icon: SiSass, level: 10, color: "text-pink-500" },
 ];
 
@@ -75,23 +85,25 @@ const frontendSkills = [
   { name: "Node.js", icon: SiNodedotjs, level: 65, color: "text-green-400" },
   { name: "Express.js", icon: SiExpress, level: 70, color: "text-gray-400" },
   { name: "NestJS", icon: SiNestjs, level: 35, color: "text-red-500" },
-  { name: "Python", icon: SiPython, level: 20, color: "text-yellow-400" },
   { name: "REST APIs", icon: SiApachespark, level: 70, color: "text-blue-500" },
   { name: "GraphQL", icon: SiGraphql, level: 30, color: "text-pink-500" },
+  { name: "Prisma", icon: SiPrisma, level: 30, color: "text-pink-500" },
+  { name: "Type ORM", icon: SiTypeorm, level: 30, color: "text-pink-500" },
 ];
 
 const databaseSkills = [
   { name: "MySQL", icon: SiMysql, level: 70, color: "text-orange-600" },
   { name: "PostgreSQL", icon: SiPostgresql, level: 55, color: "text-blue-600" },
-  { name: "MongoDB", icon: SiMongodb, level: 50, color: "text-green-600" },
+  { name: "MongoDB", icon: SiMongodb, level: 60, color: "text-green-600" },
   { name: "Redis", icon: SiRedis, level: 35, color: "text-red-600" },
-  { name: "SQLite", icon: SiSqlite, level: 0, color: "text-gray-500" },
 ];
 
 const devopsSkills = [
   { name: "Docker", icon: SiDocker, level: 50, color: "text-blue-600" },
   { name: "Kubernetes", icon: SiKubernetes, level: 20, color: "text-blue-500" },
   { name: "NGINX", icon: SiNginx, level: 0, color: "text-green-500" },
+  { name: "Apache Kafka", icon: SiApachekafka, level: 0, color: "text-green-500" },
+  { name: "Load Balancing", icon: SiAwselasticloadbalancing, level: 0, color: "text-green-500" },
   { name: "GitHub Actions", icon: SiGithubactions, level: 0, color: "text-gray-300" },
   { name: "CI/CD Pipelines", icon: SiGitlab, level: 15, color: "text-orange-500" },
 ];
@@ -99,22 +111,22 @@ const devopsSkills = [
 const toolsSkills = [
   { name: "Git", icon: SiGit, level: 80, color: "text-orange-500" },
   { name: "GitHub", icon: SiGithub, level: 75, color: "text-gray-300" },
-  { name: "GitLab", icon: SiGitlab, level: 25, color: "text-gray-300" },
+  { name: "GitLab", icon: SiGitlab, level: 35, color: "text-gray-300" },
   { name: "Figma", icon: SiFigma, level: 15, color: "text-pink-400" },
   { name: "Postman", icon: SiPostman, level: 75, color: "text-orange-500" },
   { name: "Jira", icon: SiJirasoftware, level: 0, color: "text-blue-500" },
+  { name: "VS Code", icon: VscVscode, level: 70, color: "text-blue-500" },
 ];
 
 const onlineJudges = [
-    { platform: "CodeForces", handle: "mdmehedi121888", problems: "1250+", icon: SiCodeforces, color: "text-red-500", link: "https://codeforces.com/profile/mdmehedi121888" },
-    { platform: "LeetCode", handle: "mdmehedi121888", problems: "800+", icon: SiLeetcode, color: "text-orange-500", link: "https://leetcode.com/mdmehedi121888" },
+    { platform: "CodeForces", handle: "mdmehedi121888", problems: "1300+", icon: SiCodeforces, color: "text-red-500", link: "https://codeforces.com/profile/mdmehedi121888" },
+    { platform: "LeetCode", handle: "mdmehedi121888", problems: "850+", icon: SiLeetcode, color: "text-orange-500", link: "https://leetcode.com/mdmehedi121888" },
     { platform: "GeeksforGeeks", handle: "mdmehedi121888", problems: "850+", icon: SiGeeksforgeeks, color: "text-green-400", link: "https://auth.geeksforgeeks.org/user/mdmehedi121888" },
-    { platform: "CodeChef", handle: "mdmehedi121888", problems: "180+", icon: SiCodechef, color: "text-amber-600", link: "https://www.codechef.com/users/mdmehedi121888" },
+    { platform: "CodeChef", handle: "mdmehedi121888", problems: "200+", icon: SiCodechef, color: "text-amber-600", link: "https://www.codechef.com/users/mdmehedi121888" },
 ];
 
 const cloudSkills = [
-  { name: "Google Cloud", icon: SiGooglecloud, level: 10, color: "text-blue-400" },
-  { name: "DigitalOcean", icon: SiDigitalocean, level: 40, color: "text-blue-500" },
+  { name: "Google Cloud", icon: SiGooglecloud, level: 0, color: "text-blue-400" },
   { name: "Vercel", icon: SiVercel, level: 70, color: "text-white" },
   { name: "Netlify", icon: SiNetlify, level: 55, color: "text-green-500" },
 ];
@@ -126,37 +138,36 @@ const systemSkills = [
 ];
 
 const protocolSkills = [
-  { name: "WebSockets", icon: SiSocketdotio, level: 35, color: "text-purple-500" },
-  { name: "MQTT", icon: SiMqtt, level: 15, color: "text-blue-400" },
-  { name: "gRPC", icon: SiGoogle, level: 5, color: "text-blue-500" },
+  { name: "WebSockets", icon: SiSocketdotio, level: 15, color: "text-purple-500" },
+  { name: "MQTT", icon: SiMqtt, level: 0, color: "text-blue-400" },
+  { name: "gRPC", icon: SiGoogle, level: 0, color: "text-blue-500" },
 ];
 
 const architectureSkills = [
-  { name: "Microservices", icon: SiMicrodotblog, level: 25, color: "text-yellow-500" },
+  { name: "Microservices", icon: SiMicrodotblog, level: 0, color: "text-yellow-500" },
   { name: "Clean Code", icon: SiBookstack, level: 65, color: "text-white" },
 ];
 
 const uiSkills = [
-  { name: "Material UI", icon: SiMui, level: 55, color: "text-blue-500" },
-  { name: "Ant Design", icon: SiAntdesign, level: 45, color: "text-red-500" },
-  { name: "PrimeReact", icon: SiPrime, level: 60, color: "text-teal-400" },
+  { name: "Material UI", icon: SiMui, level: 15, color: "text-blue-500" },
+  { name: "Ant Design", icon: SiAntdesign, level: 0, color: "text-red-500" },
+  { name: "PrimeReact", icon: SiPrime, level: 0, color: "text-teal-400" },
 ];
 
 const monitoringSkills = [
-  { name: "Prometheus", icon: SiPrometheus, level: 10, color: "text-orange-500" },
-  { name: "Grafana", icon: SiGrafana, level: 15, color: "text-yellow-500" },
-  { name: "Elastic Stack", icon: SiElastic, level: 10, color: "text-blue-400" },
+  { name: "Prometheus", icon: SiPrometheus, level: 0, color: "text-orange-500" },
+  { name: "Grafana", icon: SiGrafana, level: 0, color: "text-yellow-500" },
+  { name: "Elastic Stack", icon: SiElastic, level: 0, color: "text-blue-400" },
 ];
 
 const apiSkills = [
   { name: "Swagger / OpenAPI", icon: SiSwagger, level: 50, color: "text-green-500" },
-  { name: "API Blueprint", icon: SiBlueprint, level: 5, color: "text-blue-300" },
   { name: "Postman Collections", icon: SiPostman, level: 75, color: "text-orange-500" },
 ];
 
 const mobileSkills = [
-  { name: "React Native", icon: SiReact, level: 20, color: "text-cyan-400" },
-  { name: "Expo", icon: SiExpo, level: 10, color: "text-black" },
+  { name: "React Native", icon: SiReact, level: 30, color: "text-cyan-400" },
+  { name: "Expo", icon: SiExpo, level: 30, color: "text-black" },
 ];
 
   const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
@@ -199,7 +210,7 @@ const mobileSkills = [
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400"
+          className="text-4xl md:text-5xl font-bold text-center text-transparent mb-5 bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400"
         >
 
           Skills & Expertise
@@ -449,7 +460,7 @@ const mobileSkills = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-linear-to-br from-purple-900/30 via-pink-900/20 to-blue-900/30 backdrop-blur-2xl rounded-3xl border-2 border-yellow-500/40 shadow-2xl shadow-yellow-500/20 p-10"
+          className="bg-linear-to-br from-purple-900/30 via-pink-900/20 to-blue-900/30 backdrop-blur-2xl rounded-3xl border-2 mb-7 border-yellow-500/40 shadow-2xl shadow-yellow-500/20 p-10"
         >
           <div className="text-center mb-8">
             <h3 className="text-4xl font-bold text-yellow-400 mb-3">Online Judge Handles</h3>

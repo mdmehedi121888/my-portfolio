@@ -6,6 +6,7 @@ import {
   SiGithub, SiLinkedin, SiGmail, SiWhatsapp 
 } from "react-icons/si";
 import { FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
+import { send } from "@emailjs/browser";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -53,23 +54,48 @@ export default function ContactSection() {
     return isValid;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (!validateForm()) return;
+  if (!validateForm()) return;
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    // Simulate sending (replace with real API later)
-    await new Promise(resolve => setTimeout(resolve, 1800));
+  try {
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
-    setIsSubmitting(false);
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error("EmailJS environment variables are not set");
+    }
+
+    const result = await send(
+      serviceId,
+      templateId,
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        year: new Date().getFullYear(),
+
+      },
+      publicKey
+    );
+
     setShowSuccess(true);
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: '', email: '', message: '' });
 
     // Hide success message after 5 seconds
     setTimeout(() => setShowSuccess(false), 5000);
-  };
+
+  } catch (error) {
+    console.error('EmailJS error:', error);
+    alert('Failed to send message. Please try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const socialLinks = [
     { icon: SiGithub, link: "https://github.com/mdmehedi121888", color: "hover:text-white" },
@@ -148,7 +174,7 @@ export default function ContactSection() {
                 whileTap={{ scale: 0.95 }}
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-5 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all
+                className={`w-full py-5 rounded-xl font-bold text-lg flex items-center justify-center gap-3 cursor-pointer transition-all
                   ${isSubmitting 
                     ? "bg-gray-600 cursor-not-allowed opacity-70" 
                     : "bg-linear-to-r from-pink-600 to-yellow-500 hover:shadow-2xl hover:shadow-yellow-500/50"
@@ -172,7 +198,7 @@ export default function ContactSection() {
                   className="flex items-center justify-center gap-3 text-green-400 font-semibold bg-green-500/10 py-4 rounded-xl border border-green-500/30"
                 >
                   <FaCheckCircle className="w-6 h-6" />
-                  Message sent successfully! I'll reply soon
+                  Message sent successfully! Mehedi will reply soon
                 </motion.div>
               )}
             </form>

@@ -3,13 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaDownload, FaGithub, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaDownload, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import profileImg from "../../public/mehedi.png";
 import Education from "../components/Education";
 import GithubStatsDashboard from "../components/GitHubStats";
 
-const softSkills = ["Teamwork", "Problem-Solving", "Adaptability", "Communication", "Time Management"];
-const hobbies = [ "Traveling", "Tech Exploration", "Movies", "Music"];
+const softSkills = [ "Communication", "Problem-Solving", "Critical Thinking", "Adaptability", "Teamwork", "Decision-Making", "Analytical Thinking", "Time Management", "Attention to Detail", "Creativity", "Collaboration", "Active Listening", "Conflict Resolution", "Flexibility", "Work Ethic", "Self-Motivation", "Strategic Planning", "Growth Mindset", "Multitasking" ];
+
+const hobbies = [ "Traveling", "Tech Exploration", "Movies", "Music", "Podcast Listening"];
 
 export default function AboutPage() {
   return (
@@ -32,9 +33,18 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400 mb-6">
             About Me
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            A passionate learner and problem-solver dedicated to building scalable systems and beautiful digital experiences.
-          </p>
+          {/* Short Bio */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="p-8 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl"
+            >
+             <p className="text-lg text-balanced leading-relaxed text-gray-200">
+              A passionate, <span className="text-yellow-400 font-bold">self-driven developer</span> focused on building scalable systems and crafting intuitive digital experiences. I love turning ideas into reality through clean architecture and reliable engineering. Currently growing in <span className="text-pink-400 font-bold">System Design</span> and <span className="text-purple-400 font-bold">DevOps</span> to build high-performance applications. Always learning, solving problems, and collaborating to create meaningful impact.
+            </p>
+
+            </motion.div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -105,19 +115,12 @@ export default function AboutPage() {
                 >
                   <FaDownload /> Download Resume
                 </a>
-                <div className="flex justify-around gap-6">
-                  <a href="https://linkedin.com/in/md-mehedi-hasan-85619519a" target="_blank" className="text-3xl text-gray-400 hover:text-blue-500 transition">
-                    <FaLinkedin />
-                  </a>
-                  <a href="https://github.com/mdmehedi121888" target="_blank" className="text-3xl text-gray-400 hover:text-white transition">
-                    <FaGithub />
-                  </a>
-                </div>
+            
               </div>
             </div>
           </motion.div>
 
-          {/* Right side remains exactly the same */}
+          {/* Right side */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -156,19 +159,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Short Bio */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="p-8 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl"
-            >
-              <p className="text-lg leading-relaxed text-gray-200">
-                I'm a <span className="text-yellow-400 font-bold">self-driven developer</span> who loves turning ideas into reality. 
-                Currently leveling up in <span className="text-pink-400 font-bold">System Design</span> and <span className="text-purple-400 font-bold">DevOps</span> 
-                to build robust, scalable applications. Always eager to learn, collaborate, and contribute to meaningful projects.
-              </p>
-            </motion.div>
           </motion.div>
 
         </div>
