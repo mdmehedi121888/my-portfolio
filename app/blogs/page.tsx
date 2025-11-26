@@ -45,7 +45,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="min-h-screen px-6 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
+      <section className="min-h-screen px-6 pt-3 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div

@@ -30,7 +30,7 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-5"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-transparent pt-3 bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400 mb-6">
             About Me
           </h1>
           {/* Short Bio */}

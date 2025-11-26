@@ -105,7 +105,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   ];
 
   return (
-    <section className="px-6 mb-5 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29] min-h-screen">
+    <section className="px-6 mb-5 pt-3 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29] min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

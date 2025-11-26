@@ -34,19 +34,6 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5">
           <div className="flex items-center justify-between">
-
-            {/* Logo */}
-            {/* <Link href="/" className="group relative z-10">
-              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-linear-to-r from-cyan-400 via-yellow-400 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
-                MD. Mehedi Hasan
-              </h1>
-              <motion.span
-                className="absolute -bottom-1 left-0 w-0 h-1 bg-linear-to-r from-cyan-400 to-pink-500 rounded-full"
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.4 }}
-              />
-            </Link> */}
-
             <Link
             href="/"
             className="group relative z-50 block">

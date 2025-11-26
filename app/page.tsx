@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <main className="relative min-h-screen flex items-center justify-center px-6 pt-3 overflow-hidden">
       {/* Lightweight Animated Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 via-purple-600/5 to-pink-600/5" />

@@ -53,7 +53,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <section className="min-h-screen px-6 pb-7 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
+    <section className="min-h-screen px-6 pt-3 pb-7 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
