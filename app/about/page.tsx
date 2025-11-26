@@ -33,20 +33,23 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-transparent pt-3 bg-clip-text bg-linear-to-r from-yellow-400 via-pink-500 to-cyan-400 mb-6">
             About Me
           </h1>
+
+           </motion.div>
+
+
           {/* Short Bio */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="p-8 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl"
-            >
-             <p className="text-lg text-balanced leading-relaxed text-gray-200">
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2 }}
+          className="mt-5 mb-5 max-w-5xl mx-auto"
+        >
+          <p className="text-lg text-pretty leading-relaxed text-gray-200">
               A passionate, <span className="text-yellow-400 font-bold">self-driven developer</span> focused on building scalable systems and crafting intuitive digital experiences. I love turning ideas into reality through clean architecture and reliable engineering. Currently growing in <span className="text-pink-400 font-bold">System Design</span> and <span className="text-purple-400 font-bold">DevOps</span> to build high-performance applications. Always learning, solving problems, and collaborating to create meaningful impact.
             </p>
 
-            </motion.div>
         </motion.div>
-
+       
         <div className="grid lg:grid-cols-2 gap-12 items-start">
 
           {/* Left: Profile Card */}
