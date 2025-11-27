@@ -1,3 +1,5 @@
+![badge](https://img.shields.io/badge/Portfolio-Mehedi-red)
+
 <h1 align="center" style="color:#ff0000;">🌐 Personal Portfolio — Md Mehedi Hasan</h1>
 
 <p align="center">
