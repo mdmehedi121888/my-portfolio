@@ -1,4 +1,4 @@
-<h1 align="center">🌐 Personal Portfolio — Md Mehedi Hasan</h1>
+<h1 align="center" style="color:#ff0000;">🌐 Personal Portfolio — Md Mehedi Hasan</h1>
 
 <p align="center">
   <strong style="color:#4CAF50;">A modern, responsive portfolio built with Next.js</strong><br/>
