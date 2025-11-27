@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## <span style="color: red;"> Getting Started </span>
+<h2 style="color: orange">Getting Started!</h2>
+
 
 First, run the development server:
 
