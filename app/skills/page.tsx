@@ -195,7 +195,6 @@ const skillSections = [
   { title: "UI Skills", skills: uiSkills },
 ];
 
-
 const SkillSection = ({ title, skills, offset = 0 }: any) => (
   <div className="mb-16">
     <motion.h3
@@ -207,15 +206,13 @@ const SkillSection = ({ title, skills, offset = 0 }: any) => (
       {title}
     </motion.h3>
 
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
       {skills.map((skill: any, i: number) => (
         <SkillCard key={skill.name} skill={skill} index={i + offset} />
       ))}
     </div>
   </div>
 );
-
-
 
   const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
   <motion.div
@@ -254,7 +251,6 @@ const SkillSection = ({ title, skills, offset = 0 }: any) => (
     </div>
   </motion.div>
 );
-
 
   return (
     <section className="px-6 pt-3 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
