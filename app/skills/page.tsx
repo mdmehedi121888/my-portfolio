@@ -52,7 +52,11 @@ import {
   SiTypeorm,
   SiApachekafka,
   SiGo,
-  SiAwselasticloadbalancing
+  SiAwselasticloadbalancing,
+  SiYarn,
+  SiNpm,
+  SiPnpm,
+  SiBun
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -116,6 +120,10 @@ const toolsSkills = [
   { name: "Postman", icon: SiPostman, level: 75, color: "text-orange-500" },
   { name: "Jira", icon: SiJirasoftware, level: 0, color: "text-blue-500" },
   { name: "VS Code", icon: VscVscode, level: 70, color: "text-blue-500" },
+  { name: "NPM", icon: SiNpm, level: 80, color: "text-blue-500" },
+  { name: "YARN", icon: SiYarn, level: 70, color: "text-blue-500" },
+  { name: "PNPM", icon: SiPnpm, level: 70, color: "text-blue-500" },
+  { name: "BUN", icon: SiBun, level: 50, color: "text-blue-500" },
 ];
 
 const onlineJudges = [
@@ -170,37 +178,83 @@ const mobileSkills = [
   { name: "Expo", icon: SiExpo, level: 30, color: "text-black" },
 ];
 
-  const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.05 }}
-      className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105"
-    >
-      <div className="flex items-center gap-4 mb-4">
-        <div className="p-3 bg-white/10 rounded-xl">
-          <skill.icon className={`w-8 h-8 ${skill.color}`} />
-        </div>
-        <h4 className="text-white font-semibold text-sm">{skill.name}</h4>
-      </div>
+const skillSections = [
+  { title: "Programming Language", skills: programmingLanguageSkills },
+  { title: "Frontend Technologies", skills: frontendSkills },
+  { title: "Backend Technologies", skills: backendSkills },
+  { title: "API Skills", skills: apiSkills },
+  { title: "Database Technologies", skills: databaseSkills },
+  { title: "Architecture Skills", skills: architectureSkills },
+  { title: "System Skills", skills: systemSkills },
+  { title: "Protocol Skills", skills: protocolSkills },
+  { title: "Devops Technologies", skills: devopsSkills },
+  { title: "Cloud Skills", skills: cloudSkills },
+  { title: "Monitoring Skills", skills: monitoringSkills },
+  { title: "Tools", skills: toolsSkills },
+  { title: "Mobile Skills", skills: mobileSkills },
+  { title: "UI Skills", skills: uiSkills },
+];
 
-      <div className="relative">
-        <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: 0.5 + index * 0.05, ease: "easeOut" }}
-            className="h-full bg-linear-to-r from-yellow-400 to-yellow-600 rounded-full shadow-lg shadow-yellow-500/50"
-          />
-        </div>
-        <span className="absolute -top-8 right-0 text-yellow-400 text-sm font-bold">
-          {skill.level}%
-        </span>
+
+const SkillSection = ({ title, skills, offset = 0 }: any) => (
+  <div className="mb-16">
+    <motion.h3
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="text-3xl font-bold text-yellow-300 mb-10"
+    >
+      {title}
+    </motion.h3>
+
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      {skills.map((skill: any, i: number) => (
+        <SkillCard key={skill.name} skill={skill} index={i + offset} />
+      ))}
+    </div>
+  </div>
+);
+
+
+
+  const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay:  0.05 }}
+    className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105"
+  >
+    <div className="flex items-center gap-4 mb-4">
+      <div className="p-3 bg-white/10 rounded-xl">
+        <skill.icon className={`w-8 h-8 ${skill.color}`} />
       </div>
-    </motion.div>
-  );
+      <h4 className="text-white font-semibold text-sm truncate max-w-[70%]">
+        {skill.name}
+      </h4>
+    </div>
+
+    <div className="relative">
+      <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${skill.level}%` }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            delay: 0.5 + index * 0.05,
+            ease: "easeOut",
+          }}
+          className="h-full bg-linear-to-r from-yellow-400 to-yellow-600 rounded-full shadow-lg shadow-yellow-500/50"
+        />
+      </div>
+      <span className="absolute -top-8 right-0 text-yellow-400 text-sm font-bold">
+        {skill.level}%
+      </span>
+    </div>
+  </motion.div>
+);
+
 
   return (
     <section className="px-6 pt-3 bg-linear-to-b from-[#0f0c29] via-[#1a1a2e] to-[#0f0c29]">
@@ -216,243 +270,14 @@ const mobileSkills = [
           Skills & Expertise
         </motion.h2>
         
-        {/* Programming Language skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Programming Language
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {programmingLanguageSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Frontend Technologies */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Frontend Technologies
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {frontendSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Backend Technologies */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Backend Technologies
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {backendSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i + frontendSkills.length} />
-            ))}
-          </div>
-        </div>
-
-         {/* API Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            API Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {apiSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Database Technologies */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Database Technologies
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {databaseSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i + databaseSkills.length} />
-            ))}
-          </div>
-        </div>
-
-        {/* Architecture Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Architecture Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {architectureSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* System Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            System Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {systemSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Protocol Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Protocol Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {protocolSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Devops Technologies */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-             Devops Technologies
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {devopsSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i + devopsSkills.length} />
-            ))}
-          </div>
-        </div>
-
-        {/* Cloud skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-           Cloud Skills
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {cloudSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-         {/* Monitoring Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            Monitoring Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {monitoringSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Tools Technologies */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-              Tools
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {toolsSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i + toolsSkills.length} />
-            ))}
-          </div>
-        </div>
-
-           {/*Mobile Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-           Mobile Skills
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {mobileSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* UI Skills */}
-        <div className="mb-16">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-yellow-300 mb-10"
-          >
-            UI Skills           
-          </motion.h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {uiSkills.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
+        {skillSections.map((section, index) => (
+          <SkillSection
+            key={section.title}
+            title={section.title}
+            skills={section.skills}
+            offset={index * 100}
+          />
+        ))}
 
         {/* Online Judge Handles - Special Card */}
         <motion.div
