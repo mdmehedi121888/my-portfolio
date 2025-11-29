@@ -239,7 +239,7 @@ const SkillSection = ({ title, skills, offset = 0 }: any) => (
           viewport={{ once: true }}
           transition={{
             duration: 1.5,
-            delay: 0.5 + index * 0.05,
+            delay: 0.5,
             ease: "easeOut",
           }}
           className="h-full bg-linear-to-r from-yellow-400 to-yellow-600 rounded-full shadow-lg shadow-yellow-500/50"
