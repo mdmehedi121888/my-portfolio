@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![badge](https://img.shields.io/badge/Portfolio-Mehedi-red)
 
-## Getting Started
+<h1 align="center" style="color:#ff0000;">🌐 Personal Portfolio — Md Mehedi Hasan</h1>
 
-First, run the development server:
+<p align="center">
+  <strong style="color:#4CAF50;">A modern, responsive portfolio built with Next.js</strong><br/>
+  <em>Showcasing my skills, projects, experience, and blogs.</em>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <a href="https://mdmehedi-hasan.vercel.app/" target="_blank">
+    🔗 <strong>Live Website</strong>
+  </a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<hr/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<div align="center">
 
-## Learn More
+| Category | Technologies |
+|---------|--------------|
+| **Framework** | Next.js |
+| **Frontend** | React, TailwindCSS |
+| **State Management** | React Hooks, Context |
+| **Deployment** | Vercel |
+| **Other Tools** | Git, GitHub, Markdown |
 
-To learn more about Next.js, take a look at the following resources:
+</div>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏠 Home Page
 
-## Deploy on Vercel
+<p>
+  <span style="color:#2196F3;"><strong>The landing page highlights my identity, role, and a clean intro.</strong></span><br/>
+  Modern UI, animated components, and quick navigation to other sections.
+</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="center">
+  <img src="YOUR_HOME_PAGE_SCREENSHOT_URL" alt="Home Page" width="700"/>
+</p>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👤 About Page
+
+<p>
+  <span style="color:#E91E63;"><strong>The About section includes a detailed biography</strong></span>, background, interests, and my mission as a developer.
+</p>
+
+<p align="center">
+  <img src="YOUR_ABOUT_PAGE_SCREENSHOT_URL" alt="About Page" width="700"/>
+</p>
+
+---
+
+## 🛠 Skills Page
+
+<p>
+  <span style="color:#8BC34A;"><strong>All my technical skills beautifully categorized and visualized.</strong></span><br/>
+  Frontend, Backend, Tools, Database, and more.
+</p>
+
+<p align="center">
+  <img src="YOUR_SKILLS_PAGE_SCREENSHOT_URL" alt="Skills Page" width="700"/>
+</p>
+
+---
+
+## 📂 Projects Page
+
+<p>
+  A showcase of <span style="color:#FF9800;"><strong>my best work with descriptions, images, and GitHub links.</strong></span>
+</p>
+
+<p align="center">
+  <img src="YOUR_PROJECTS_PAGE_SCREENSHOT_URL" alt="Projects Page" width="700"/>
+</p>
+
+---
+
+## 💼 Experience Page
+
+<p>
+  My past work history, positions, responsibilities, and notable achievements.
+</p>
+
+<p align="center">
+  <img src="YOUR_EXPERIENCE_PAGE_SCREENSHOT_URL" alt="Experience Page" width="700"/>
+</p>
+
+---
+
+## ✍️ Blog Page
+
+<p>
+  <span style="color:#673AB7;"><strong>Blogs related to coding, technology, problem-solving, and personal learning.</strong></span>
+</p>
+
+<p align="center">
+  <img src="YOUR_BLOG_PAGE_SCREENSHOT_URL" alt="Blog Page" width="700"/>
+</p>
+
+---
+
+## 📞 Contact Page
+
+<p>
+  Integrated contact form for easy communication.<br/>
+  <strong style="color:#F44336;">Email, social links, and instant messaging support included.</strong>
+</p>
+
+<p align="center">
+  <img src="YOUR_CONTACT_PAGE_SCREENSHOT_URL" alt="Contact Page" width="700"/>
+</p>
+
+---
+
+## 🔗 Connect With Me
+
+<p align="center">
+  <a href="https://www.linkedin.com/" target="_blank">💼 LinkedIn</a> •
+  <a href="https://github.com/" target="_blank">🐙 GitHub</a> •
+  <a href="https://facebook.com/" target="_blank">📘 Facebook</a> •
+  <a href="mailto:your-email@gmail.com">📧 Email</a>
+</p>
+
+---
+
+## ⭐ Support
+
+If you like this portfolio or want to use it as a template:
+
